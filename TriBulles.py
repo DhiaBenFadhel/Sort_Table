@@ -14,13 +14,14 @@ def affichage(t,n):
         print(t[i],end=" ")
 
 def Tribulles(t,n):
-    echange=False
-    while not((echange==True) or (n==1)):
+    echange=True
+    while not((echange==False) or (n==1)):
         for i in range(n-1):
             if t[i]>t[i+1]:
                 x=t[i]
                 t[i]=t[i+1]
                 t[i+1]=x
+                echange=True
         n-=1
 
 
